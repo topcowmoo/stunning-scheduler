@@ -13,7 +13,7 @@
 
 ## 4. Update the time-block ID colors based on the current time:
 * Get the current time.
-* Get the time-block time from its ID.
+* Get the time-block time from its ID (past, present or future).
 * Add the proper class based on the current time.
 
 ## 5. Whenever the pages loads:
