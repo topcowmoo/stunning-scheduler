@@ -3,12 +3,12 @@ $(function () {
     var timeBlockID = $(this).parent().attr("id");
     var userInput = $(this).siblings(".description").val();
     localStorage.setItem(timeBlockID, userInput);
-});
+  });
 
 function updateColors() {
     var currentHour = dayjs().hour();
     $(".time-block").each(function () {
-      var timeBlockHour = parseInt($(this).attr("id).split("-") [1]);
+      var timeBlockHour = parseInt($(this).attr("id").split("-") [1]);
       $(this).removeClass("past present future");
       if (timeBlockHour < currentHour) {
         $(this).addClass("past");
@@ -17,7 +17,7 @@ function updateColors() {
       } else {
         $(this).addClass("future");
       }
-});
+  });
 }
 
 updateColors();
@@ -27,10 +27,8 @@ function displayUserInput() {
         var timeBlockID = $(this).attr("id");
         var savedInput = localStorage.getItem(timeBlockID);
         $(this).find(".description").val(savedInput);
-});
+  });
 }
-
-
 
 displayUserInput();
 
