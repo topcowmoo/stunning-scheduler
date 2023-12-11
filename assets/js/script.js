@@ -13,7 +13,7 @@ function updateColors() {
       if (timeBlockHour < currentHour) {
         $(this).addClass("past");
       } else if (timeBlockHour === currentHour) {
-        $(this).removeClass("present");
+        $(this).addClass("present");
       } else {
         $(this).addClass("future");
       }
@@ -31,7 +31,6 @@ function displayUserInput() {
 }
 
 displayUserInput();
-
 });
 
 var currentDate = dayjs();
