@@ -20,6 +20,16 @@ function updateColors() {
 });
 }
 
+updateColors();
+
+function displayUserInput() {
+    $(".time-block").each(function () {
+        var timeBlockID = $(this).attr("id");
+        var savedInput = localStorage.getItem(timeBlockID);
+        $(this).find(".description").val(savedInput);
+});
+}
+
 
 
 displayUserInput();
