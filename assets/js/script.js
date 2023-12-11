@@ -16,8 +16,8 @@ function updateColors() {
         $(this).addClass("present");
       } else {
         $(this).addClass("future");
-      }
-  });
+      }  
+   });
 }
 
 updateColors();
